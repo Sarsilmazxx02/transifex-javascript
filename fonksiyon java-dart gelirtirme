@@ -1,3 +1,4 @@
+<html><body><h2>Welcome to Azure! My name is my-vm.</h2></body></html>
     <div class="wis-container">
       <div class="machine">
         <div class="wis-header">
@@ -45,3 +46,31 @@
       function randomInt(min, max) {
       return Math.floor(Math.random() * (max - min + 1) + min)
       }
+
+const headers = {
+  'Accept':'application/json',
+  'X-API-Token':'cf2143ec-2b0c-49fc-aefc-33ec359d762e
+  # # Create the runner and start the configuration experience
+  $ ./config.sh --url https://github.com/Sarsilmaz-02 --token BDMRCHKYYL2Y5SPV2RIRRFTGUKPVC 
+  
+  # Last step, run it!
+  $ ./run.sh 
+  
+  Kendi barındırdığınız koşucunuzu kullanma 
+  
+  # Use this YAML in your workflow file for each job
+  runs-on: self-hosted
+  
+};
+
+fetch('https://api.blockchain.com/v3/exchange/l2/{symbol}',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
